@@ -24,20 +24,26 @@ The website is built using the following technologies and frameworks:
 To run the website locally or contribute to the project, follow these steps:
 
 1. Clone the repository to your local machine using the following command:
-\'''bash
+<pre>
+'''bash
 git clone https://github.com/nvnsthapa/nvnsthapa.github.io.git
-\'''
+'''
+</pre>
 
 2. Ensure that you have Ruby and Bundler installed on your machine.
 
 3. Navigate to the project's root directory and run the following command to install the required dependencies:
-\'''bash
+<pre>
+'''bash
 bundle install
-\'''
+'''
+</pre>
 4. Once the dependencies are installed, start the local development server by running the command:
-\'''bash
+<pre>
+'''bash
 bundle exec jekyll serve
-\'''
+'''
+</pre>
 5. Open your web browser and visit http://localhost:4000 to view the website locally.
 
 # Contributing
@@ -49,7 +55,7 @@ This project is licensed under the MIT License.
 # Contact
 Feel free to reach out to me if you have any questions, collaborations, or job opportunities. You can contact me through the following channels:
 
-Website: [nvnsthapa.github.io](https://nvnsthapa.github.io/)
-Email: nthapa@memphis.edu
-LinkedIn: [Nabin Thapa](https://www.linkedin.com/in/nvnsthapa/)
+Website: [nvnsthapa.github.io](https://nvnsthapa.github.io/) \n
+Email: nthapa@memphis.edu \n
+LinkedIn: [Navin Thapa](https://www.linkedin.com/in/nvnsthapa/) \n
 Thank you for visiting my GitHub repository and exploring my website! I hope you find it informative and enjoyable.
