@@ -8,9 +8,9 @@ Hello there! I'm Navin Thapa, a PhD student of Geophysics specializing in Seismo
 The nvnsthapa.github.io website serves as a portfolio and blog, showcasing my projects, skills, and thoughts on various topics related to web development and technology. Here's a brief overview of the website's sections:
 
 **- Home**: The landing page provides a brief introduction and highlights some of my recent projects.  
-**- Projects**: This section showcases a selection of my projects, including descriptions, screenshots, and links to live demos or GitHub repositories.  
-**- Blog**: The blog features articles and tutorials on web development topics, where I share my knowledge and insights with the community.  
-**- About**: This page provides more information about me, including my background, skills, and contact details.  
+**- Research**: This section showcases a selection of my research projects, including descriptions, screenshots, and links to live demos or GitHub repositories.  
+**- Publications**: This page provides more information about my publications, including my conference, journal, and  details.  
+**- Blog**: The blog features articles and personal phographic blogs on geophysics topics, where I share my knowledge, field trips and insights with the community.  
 **- Contact**: Users can reach out to me via the contact form or by connecting through various social media platforms.  
 
 # Technologies Used
@@ -55,7 +55,7 @@ This project is licensed under the MIT License.
 # Contact
 Feel free to reach out to me if you have any questions, collaborations, or job opportunities. You can contact me through the following channels:
 
-Website: [nvnsthapa.github.io](https://nvnsthapa.github.io/) \n
-Email: nthapa@memphis.edu \n
-LinkedIn: [Navin Thapa](https://www.linkedin.com/in/nvnsthapa/) \n
+Website: [nvnsthapa.github.io](https://nvnsthapa.github.io/). 
+Email: nthapa@memphis.edu. 
+LinkedIn: [Navin Thapa](https://www.linkedin.com/in/nvnsthapa/). 
 Thank you for visiting my GitHub repository and exploring my website! I hope you find it informative and enjoyable.
