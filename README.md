@@ -39,7 +39,7 @@ bundle exec jekyll serve
 5. Open your web browser and visit http://localhost:4000 to view the website locally.
 
 # License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://opensource.org/license/mit/).
 
 # Contact
 Feel free to reach out to me if you have any questions or collaborations. You can contact me through the following channels:
