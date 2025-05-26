@@ -56,10 +56,10 @@
     <div class="container-fluid p-0 text-justify">
       <article class="blog-post">
         <header class="blog-header">
-          <h1>Journey as a Geophysicist in Nepal: From Classroom to the Himalayas</h1>
+          <h1>In the Footsteps of Rivers and Rocks: A Geophysicist’s Himalayan Story</h1>
           <div class="blog-meta">
             <span class="date">December 27, 2018</span>
-            <span class="category">Geophysics</span>
+            <span class="category">Personal Experience</span>
           </div>
         </header>
 
@@ -82,13 +82,31 @@
             <figcaption style="font-style: italic;">Lunchtime at a remote project site, shared by the whole team—locals, porters, engineers alike.</figcaption>
           </figure>
           
-          <p>One of the most memorable parts of this journey was our connection with the local communities. Many of the dam and hydropower sites were hardly accessible by road, so we hired local porters to help us carry equipment. These porters weren’t just helpers—they were vital to the success of our operations. In many cases, their family members joined to cook meals for the whole team.</p>
+          <p>One of the most memorable parts of this journey was our connection with the local communities. Many of the dam and hydropower sites were hardly accessible by road, so we hired local porters to help us carry equipment. These porters weren't just helpers—they were vital to the success of our operations. In many cases, their family members joined to cook meals for the whole team.</p>
           
-          <p>Meals like the one above were something special. Everyone—from engineers to porters to cooks—sat together on the forest floor, passing plates and sharing stories. It was humbling, unifying, and unlike anything I’d experienced before. These communal lunches in the mountains taught me not just about geophysics, but about teamwork, humility, and respect.</p>
+          <p>Meals like the one above were something special. Everyone—from engineers to porters to cooks—sat together on the forest floor, passing plates and sharing stories. It was humbling, unifying, and unlike anything I'd experienced before. These communal lunches in the mountains taught me not just about geophysics, but about teamwork, humility, and respect.</p>
          
-          <p>This job taught me more than just geophysics. It taught me teamwork, adaptability, and patience. It showed me the importance of listening to local communities and learning from their knowledge of the land. And above all, it gave me a sense of purpose.</p>
+          <figure style="text-align: center;">
+            <img src="/assets/img/blogs/Hiking.jpg" alt="Blog thumbnail" style="width: 60%;">
+            <figcaption style="font-style: italic;">Taking a break during our 8-day hike to the project site, fully loaded with gear and supplies.</figcaption>
+          </figure>
           
+          <p> Reaching some of these sites took days. On one project, we hiked for eight straight days through the hills, forests, and river valleys. Every step brought us deeper into remote territory—far from electricity, roads, or mobile signals. Carrying instruments and personal gear on our backs or in bamboo baskets, we pushed ourselves physically and mentally.</p>
+          <p>I lost a noticeable amount of weight during that project, but gained something even more valuable: resilience and perspective. Every blister, every cold morning, every slippery trail was part of a once-in-a-lifetime experience that deepened my connection to my profession and this incredible country. </p>
+
+          <figure style="text-align: center;">
+            <img src="/assets/img/blogs/river.jpg" alt="Blog thumbnail" style="width: 60%;">
+            <figcaption style="font-style: italic;">Taking a break during our 8-day hike to the project site, fully loaded with gear and supplies.</figcaption>
+          </figure>
+
+          <P>At the end of each trip, there were moments of silence like this one, by a rushing river in the heart of the forest, where everything made sense. The sound of water carving through stone, the untouched wilderness around us, and the quiet reward of purpose after long workdays.</P>
+          <p>These rivers are more than just hydropower sources—they are lifelines for villages, ecosystems, and histories. And to stand by them, studying their secrets and helping shape their future, is a privilege I will never take lightly.</p>
+
+          <p>This job taught me more than just geophysics. It taught me teamwork, adaptability, and patience. It showed me the importance of listening to local communities and learning from their knowledge of the land. And above all, it gave me a sense of purpose.</p>
+
+          <p>This chapter of my life was raw, real, and transformative. I'll always carry these stories—and the friendships forged in mud, mist, and mountains—with me.
           <p>I'll be sharing more about specific projects and experiences—including the tools we used, the science behind our work, and the stories of the people we met along the way—in upcoming posts.</p>
+          <p>Thank you for reading. More field tales coming soon.</p>
 
         </div>
 
@@ -109,6 +127,26 @@
             </a>
           </div>
         </div>
+
+        <div class="comments-section">
+          <h4>Comments</h4>
+          
+          <form class="comment-form" id="commentForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="comment">Comment</label>
+              <textarea class="form-control" id="comment" name="comment" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Post Comment</button>
+          </form>
+
+          <div class="comments-list" id="commentsList">
+            <!-- Comments will be dynamically added here -->
+          </div>
+        </div>
       </article>
     </div>
   </div>
@@ -124,5 +162,33 @@
   <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="/assets/js/mdb.min.js" type="text/javascript"></script>
   <script src="/assets/js/common.js"></script>
+  
+  <!-- Comment System JavaScript -->
+  <script>
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const comment = document.getElementById('comment').value;
+      const date = new Date().toLocaleDateString();
+      
+      // Create new comment element
+      const commentElement = document.createElement('div');
+      commentElement.className = 'comment';
+      commentElement.innerHTML = `
+        <div class="comment-header">
+          <span class="comment-author">${name}</span>
+          <span class="comment-date">${date}</span>
+        </div>
+        <div class="comment-content">${comment}</div>
+      `;
+      
+      // Add comment to the list
+      document.getElementById('commentsList').prepend(commentElement);
+      
+      // Clear the form
+      document.getElementById('commentForm').reset();
+    });
+  </script>
 </body>
 </html> 
