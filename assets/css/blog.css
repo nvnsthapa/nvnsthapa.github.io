@@ -1,0 +1,131 @@
+/* Blog Styles */
+.blog-card {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #fff;
+}
+
+.blog-thumbnail {
+  display: flex;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-thumbnail:hover {
+  background: #f8f9fa;
+}
+
+.blog-info {
+  flex: 1;
+  padding-right: 1.5rem;
+}
+
+.blog-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.blog-excerpt {
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.blog-image {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-content {
+  display: none;
+  padding: 2rem;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.blog-content.expanded {
+  display: block;
+}
+
+.blog-meta {
+  margin: 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.blog-meta span {
+  margin-right: 1rem;
+}
+
+.blog-body {
+  line-height: 1.6;
+}
+
+.blog-body p {
+  margin-bottom: 1rem;
+}
+
+/* Social Share Buttons */
+.social-share {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.social-share h4 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.share-button:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color: white;
+}
+
+.share-button i {
+  margin-right: 0.5rem;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.linkedin {
+  background-color: #0a66c2;
+}
+
+.twitter {
+  background-color: #000000;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+} 
