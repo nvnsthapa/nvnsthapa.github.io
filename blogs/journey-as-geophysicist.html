@@ -56,7 +56,7 @@
     <div class="container-fluid p-0 text-justify">
       <article class="blog-post">
         <header class="blog-header">
-          <h1>In the Footsteps of Rivers and Rocks: A Geophysicist’s Himalayan Story</h1>
+          <h1>In the Footsteps of Rivers and Rocks: A Geophysicist's Himalayan Story</h1>
           <div class="blog-meta">
             <span class="date">December 27, 2018</span>
             <span class="category">Personal Experience</span>
@@ -165,6 +165,35 @@
   
   <!-- Comment System JavaScript -->
   <script>
+    // Function to create delete button
+    function createDeleteButton(commentElement) {
+      const deleteBtn = document.createElement('button');
+      deleteBtn.className = 'delete-comment';
+      deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
+      deleteBtn.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        color: #dc3545;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 0.9rem;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      `;
+      deleteBtn.onmouseover = () => deleteBtn.style.opacity = '1';
+      deleteBtn.onmouseout = () => deleteBtn.style.opacity = '0.7';
+      deleteBtn.onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Are you sure you want to delete this comment?')) {
+          commentElement.remove();
+        }
+      };
+      return deleteBtn;
+    }
+
     document.getElementById('commentForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -175,6 +204,7 @@
       // Create new comment element
       const commentElement = document.createElement('div');
       commentElement.className = 'comment';
+      commentElement.style.position = 'relative'; // For delete button positioning
       commentElement.innerHTML = `
         <div class="comment-header">
           <span class="comment-author">${name}</span>
@@ -182,6 +212,9 @@
         </div>
         <div class="comment-content">${comment}</div>
       `;
+      
+      // Add delete button
+      commentElement.appendChild(createDeleteButton(commentElement));
       
       // Add comment to the list
       document.getElementById('commentsList').prepend(commentElement);
