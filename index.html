@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Navin Thapa</title>
-    <meta name="description" content="Personal website of Navin Thapa.">
+    <title>Navin Thapa | Seismology Researcher</title>
+    <meta name="description" content="Navin Thapa is a PhD student in Seismology at CERI, University of Memphis, researching earthquake physics, fault mechanics, and automated seismic monitoring.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nvnsthapa.github.io/">
+    <meta property="og:title" content="Navin Thapa | Seismology Researcher">
+    <meta property="og:description" content="PhD student in Seismology at CERI, University of Memphis. Research in earthquake physics, fault mechanics, and automated seismic monitoring.">
+    <meta property="og:image" content="https://nvnsthapa.github.io/assets/img/prof_pic.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Navin Thapa | Seismology Researcher">
+    <meta name="twitter:description" content="PhD student in Seismology at CERI, University of Memphis. Research in earthquake physics, fault mechanics, and automated seismic monitoring.">
+    <meta name="twitter:image" content="https://nvnsthapa.github.io/assets/img/prof_pic.jpg">
 
     <!-- Fonts and Icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
@@ -17,13 +28,32 @@
 
     <!-- Scripts -->
     <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Navin Thapa",
+      "url": "https://nvnsthapa.github.io",
+      "jobTitle": "PhD Researcher in Seismology",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Memphis",
+        "department": "Center for Earthquake Research and Information"
+      },
+      "sameAs": [
+        "https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en"
+      ]
+    }
+    </script>
 </head>
 
 <body class="home-page">
     <!-- Header -->
     <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
         <div class="container-fluid p-0">
-            <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Navin</span> Thapa</a>
+            <a class="navbar-brand" href="/">Navin Thapa</a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,24 +88,29 @@
                     Graduate Doctoral Researcher<br /> CERI, University of Memphis
                 </h6>
                 <p>
-                    I am currently pursuing a doctoral degree in Seismology at the <a href="https://www.memphis.edu/ceri/">Center for Earthquake Research and Information</a>, University of Memphis.
-                    My research endeavors are conducted within the <a href="http://www.ceri.memphis.edu/people/thgoebel/">Earthquake Physics Laboratory</a> led by <a href="https://www.memphis.edu/ceri/people/faculty/thomas-goebel.php">Dr. Thomas Goebel</a>.
-                    My research is driven by a deep curiosity about the physics of faulting and the mechanisms that govern earthquakes in subduction zones, volcanic environments, and experimental laboratory-created faults.
+                    I am a doctoral researcher in Seismology at the <a href="https://www.memphis.edu/ceri/">Center for Earthquake Research and Information</a>, University of Memphis, working in the <a href="https://www.ceri.memphis.edu/people/thgoebel/">Earthquake Physics Laboratory</a> under <a href="https://www.memphis.edu/ceri/people/faculty/thomas-goebel.php">Dr. Thomas Goebel</a>.
+                    My work focuses on the physics of faulting — from controlled laboratory experiments to earthquake sequences in subduction zones, volcanic systems, and Enhanced Geothermal System seismicity.
                 </p>
                 <div class="academic-actions">
-                    <a href="#">CV</a>
-                    <a href="/publications/publications.html">Publications</a>
-                    <a href="/projects/projects.html">Research Projects</a>
+                    <a href="/assets/pdf/vitae.pdf" target="_blank">CV</a>
+                    <a href="mailto:nthapa@memphis.edu">Email</a>
+                    <a href="https://www.linkedin.com/in/nvnsthapa/" target="_blank">LinkedIn</a>
                     <a href="https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en" target="_blank">Google Scholar</a>
                 </div>
             </div>
 
             <aside class="academic-hero__profile">
-                <img class="profile-img" src="/assets/img/prof_pic.jpg" alt="Navin Thapa" />
+                <div class="profile-img-wrapper">
+                    <img class="profile-img" src="/assets/img/prof_pic.jpg" alt="Navin Thapa" />
+                    <div class="profile-img-overlay" aria-hidden="true">
+                        <p><strong>Direct Shear Apparatus</strong><br>
+                        Earthquake Physics Laboratory, CERI — University of Memphis</p>
+                        <p>A custom steel load frame capable of testing fault samples up to 1000 mm long. Equipped with a variable-rate drive system and sensors tracking normal stress, shear force, and displacements in both fault-parallel and fault-normal directions. Acoustic emission recording and a high-speed camera for digital image correlation enable real-time capture of full-field strain and slip patterns across the fault surface.</p>
+                    </div>
+                </div>
                 <div>
-                    <strong>Earthquake Physics Laboratory</strong>
-                    <span>Center for Earthquake Research and Information</span>
-                    <span>University of Memphis</span>
+                    <strong>Making faults slip — in the lab</strong>
+                    <span>CERI · University of Memphis</span>
                 </div>
             </aside>
         </section>
@@ -83,24 +118,24 @@
         <section class="academic-section research-focus">
             <div class="academic-section__heading">
                 <p class="academic-kicker">Research Focus</p>
-                <h2 class="title">Earthquake processes from laboratory faults to monitored seismic systems</h2>
+                <h2 class="title">Decoding earthquakes — from rock experiments to seismic networks</h2>
             </div>
             <div class="research-focus__grid">
                 <article>
                     <h3>Fault Gouge Composition & Repeating Earthquakes</h3>
-                    <p>Investigating how different fault gouge materials influence recurring seismic events and fault creep. Since repeating earthquakes originate from the same fault patch, they exhibit identical source mechanisms and highly similar waveforms.</p>
+                    <p>Fault gouge — the granular material ground between sliding rock surfaces — governs how a fault slips. I study how gouge composition controls frictional instability and the occurrence of repeating earthquakes — events that rupture the same patch repeatedly, leaving near-identical waveform fingerprints that reveal fault creep and stress cycling over time.</p>
                 </article>
                 <article>
-                    <h3>Pore Pressure & Seismic Frequency-Magnitude Distributions</h3>
-                    <p>Examining the role of fluid pressure variations in laboratory fault zones and their impact on the frequency-magnitude distribution and b-value, which provides insights into fault stress conditions and seismic hazard assessment.</p>
+                    <h3>Pore Pressure & Seismic b-value</h3>
+                    <p>Fluid pressure in the subsurface is a key trigger for induced seismicity. Using controlled laboratory experiments, I directly measure how changing pore pressure shifts the frequency-magnitude distribution of acoustic emissions — providing a physical basis for interpreting b-value changes in geothermal and injection-induced earthquake sequences.</p>
                 </article>
                 <article>
                     <h3>Laboratory Earthquakes</h3>
-                    <p>A key component of my research involves studying laboratory earthquakes, which show structural similarities to natural fault systems in the upper crust and generate seismic event statistics comparable to real-world seismicity.</p>
+                    <p>Faults in the lab obey the same statistical laws as faults in the Earth. By generating controlled slip events on rock samples, I study rupture nucleation, stress drop, and aftershock-like clustering at scales where every parameter can be measured — offering ground truth that field seismology alone cannot provide.</p>
                 </article>
                 <article>
                     <h3>Automated Seismic Monitoring for Energy Operations</h3>
-                    <p>Developing a fully automated seismic monitoring system to improve safety and efficiency in geothermal, oil & gas, and carbon storage operations. This work aims to enhance seismic hazard assessment and mitigate risks associated with induced seismicity.</p>
+                    <p>Safe subsurface energy production — geothermal, oil and gas, carbon storage — demands continuous, reliable seismic surveillance. I develop automated detection and classification pipelines that reduce analyst workload, improve event catalog completeness, and enable near-real-time hazard assessment for induced seismicity.</p>
                 </article>
             </div>
         </section>
@@ -108,7 +143,7 @@
         <section class="academic-section academic-narrative">
             <div class="academic-section__heading">
                 <p class="academic-kicker">Approach</p>
-                <h2 class="title">Integrating experiments, numerical models, and seismic monitoring</h2>
+                <h2 class="title">Where lab experiments, physics models, and field data converge</h2>
             </div>
             <div class="academic-narrative__body">
                 <p>
@@ -130,47 +165,77 @@
                 <p class="academic-kicker">Selected Publications</p>
                 <h2 class="title">Recent work</h2>
             </div>
+            <!-- ==================== SELECTED PUBLICATIONS ====================
+                 To add: copy one PUBLICATION CARD block, paste above the first,
+                 update journal, title, authors, and DOI link.
+            ======================================================== -->
             <div class="publication-grid">
+
+                <!-- ====== PUBLICATION CARD | Thapa 2025 GRL ====== -->
                 <article>
                     <span>Geophysical Research Letters, 2025</span>
                     <h3>Does b-value increase with higher pore-pressure?: Insights from laboratory experiments and induced seismicity</h3>
                     <p><em>Navin Thapa</em>, Dresen Georg, and Thomas H. Goebel</p>
                     <a href="https://doi.org/10.1029/2025GL115740" target="_blank">DOI</a>
                 </article>
+                <!-- ======= END PUBLICATION CARD ======= -->
+
+                <!-- ====== PUBLICATION CARD | Goebel 2025 SRL ====== -->
                 <article>
                     <span>Seismological Research Letters, 2025</span>
                     <h3>A Community Seismic Network for the Early Detection of Seismic Activity Close to Active Volcanoes in Western El Salvador</h3>
                     <p>Thomas H. Goebel, <em>Navin Thapa</em>, Sadia Marium Rinty, Susana Delgado Andino, Adonay Martinex-Coto, Jaqueline Rivera, and Benancio Henriquez-Miranda</p>
                     <a href="https://doi.org/10.1785/0220240343" target="_blank">DOI</a>
                 </article>
+                <!-- ======= END PUBLICATION CARD ======= -->
+
             </div>
         </section>
 
         <section class="academic-section research-highlights">
             <div class="academic-section__heading">
                 <p class="academic-kicker">Highlights</p>
-                <h2 class="title">Research, monitoring, and media coverage</h2>
+                <h2 class="title">In the field, in print, in the news</h2>
             </div>
+            <!-- ==================== HIGHLIGHTS ====================
+                 To add: copy one HIGHLIGHT CARD block, paste anywhere inside
+                 highlight-grid, update image src, alt text, and caption.
+                 Images go in /assets/img/gallery/
+            ======================================================== -->
             <div class="highlight-grid">
+
+                <!-- ====== HIGHLIGHT CARD | UofM Story ====== -->
                 <article>
-                    <img src="assets/img/gallery/highlightstory.png" alt="Highlight story of my research published in University of Memphis">
+                    <img src="assets/img/gallery/highlightstory.png" alt="Highlight story of my research published in University of Memphis" loading="lazy">
                     <p>Highlight story of my research published in University of Memphis</p>
                 </article>
+                <!-- ======= END HIGHLIGHT CARD ======= -->
+
+                <!-- ====== HIGHLIGHT CARD | Santa Ana Network ====== -->
                 <article>
-                    <img src="assets/img/gallery/santaanaNet.png" alt="Santa Ana Volcano seismicity monitoring network">
+                    <img src="assets/img/gallery/santaanaNet.png" alt="Santa Ana Volcano seismicity monitoring network" loading="lazy">
                     <p>Santa Ana Volcano seismicity monitoring network</p>
                 </article>
+                <!-- ======= END HIGHLIGHT CARD ======= -->
+
+                <!-- ====== HIGHLIGHT CARD | Commercial Appeal ====== -->
                 <article>
-                    <img src="assets/img/gallery/commercialAppeal.png" alt="highlight story of my research published in The Commercial Appeal">
-                    <p>highlight story of my research published in The Commercial Appeal</p>
+                    <img src="assets/img/gallery/commercialAppeal.png" alt="Highlight story of my research published in The Commercial Appeal" loading="lazy">
+                    <p>Highlight story of my research published in The Commercial Appeal</p>
                 </article>
+                <!-- ======= END HIGHLIGHT CARD ======= -->
+
             </div>
         </section>
 
-        <!-- -------------------------------------------UPDATES--------------------------------- -->
+        <!-- ==================== UPDATES SECTION ====================
+             To add a new update: copy one UPDATE ENTRY block below,
+             paste it ABOVE the first entry, and change the date + text.
+        ======================================================== -->
         <section class="home-section news mt-3 p-0">
             <h1 class="title mb-4 p-0">Updates</h1>
 
+            <!-- ====== UPDATE ENTRY | Nov 8, 2024 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -178,12 +243,14 @@
         </span>
                 </div>
                 <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
-                    <p> Completed<b> National I-Corps Program hosted by </b> Mid South as part of the 
+                    <p> Completed<b> National I-Corps Program hosted by </b> Mid South as part of the
                         <a href="https://www.nsf.gov/funding/initiatives/i-corps"> National Science Foundation's I-Corps program
                            </a></p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
+            <!-- ====== UPDATE ENTRY | June 3, 2024 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -196,7 +263,9 @@
                            </a></p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
+            <!-- ====== UPDATE ENTRY | May 20, 2024 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -205,12 +274,14 @@
                 </div>
                 <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
                     <p> Attended<b> SCOPED Workshop 2024: CyberTraining for Seismology </b> in University of Washington, Seattle, WA, USA. <b>Present Poster</b>on
-                        <a href="assets/pdf/SCOPED24_POSTER.pdf"> Community Seismic Network in the Apaneca-Ilamatepec-Coatepeque 
+                        <a href="assets/pdf/SCOPED24_POSTER.pdf"> Community Seismic Network in the Apaneca-Ilamatepec-Coatepeque
                            Volcanic Complex in El Salvador.
                            </a></p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
+            <!-- ====== UPDATE ENTRY | Apr 22, 2024 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -218,14 +289,14 @@
         </span>
                 </div>
                 <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
-                    <p> <b> News and Impact feature on UofM Division of Research and Innovation for </b> 
+                    <p> <b> News and Impact feature on UofM Division of Research and Innovation for </b>
                          <a href="https://www.memphis.edu/research/impact/newsletter_2024/april24_stories/uofm_research_center_launches_collaboration_with_el_salvador.php"> building new seismic network around Santa Ana volcano, El Salvador during the fall of 2023</a> in collaboration with El Salvador
-                   
                         </p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
-
+            <!-- ====== UPDATE ENTRY | Feb 07, 2024 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -237,8 +308,9 @@
                     </p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
-
+            <!-- ====== UPDATE ENTRY | Dec 12, 2023 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -250,7 +322,9 @@
                     </p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
+            <!-- ====== UPDATE ENTRY | Sep 22, 2023 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -262,8 +336,9 @@
                     </p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
-
+            <!-- ====== UPDATE ENTRY | May 15, 2023 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -275,7 +350,9 @@
                     </p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
+            <!-- ====== UPDATE ENTRY | Aug 28, 2021 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -283,11 +360,13 @@
         </span>
                 </div>
                 <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
-                    <p>Joined <a href="http://www.ceri.memphis.edu/people/thgoebel/">Earthquake Physics Group</a> at CERI led by Dr. Thomas Goebel. 
+                    <p>Joined <a href="https://www.ceri.memphis.edu/people/thgoebel/">Earthquake Physics Group</a> at CERI led by Dr. Thomas Goebel.
                     </p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
+            <!-- ====== UPDATE ENTRY | Jan 01, 2021 ====== -->
             <div class="row p-0">
                 <div class="col-sm-2 p-0">
                     <span class="badge primary-color font-weight-bold text-uppercase align-middle date ml-3">
@@ -299,6 +378,7 @@
                     </p>
                 </div>
             </div>
+            <!-- ======= END UPDATE ENTRY ======= -->
 
             <!-- University of Memphis Feature -->
             <div class="row mt-3">
@@ -338,35 +418,8 @@
     <script src="/assets/js/mdb.min.js" type="text/javascript"></script>
     <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="/assets/js/common.js"></script>
-
-    <!-- GitHub Stars -->
-    <script src="/assets/js/github-stars.js"></script>
-    <script type="text/javascript">
-        githubStars("eaplatanios/symphony-mt", function(stars) {
-            $("#curriculum-learningeaplatanios-symphony-mt-stars").text('' + stars);
-        });
-
-
-
-
-        githubStars("eaplatanios/jelly-bean-world", function(stars) {
-            $("#jelly-bean-worldeaplatanios-jelly-bean-world-stars").text('' + stars);
-        });
-
-
-
-
-        githubStars("eaplatanios/symphony-mt", function(stars) {
-            $("#machine-translationeaplatanios-symphony-mt-stars").text('' + stars);
-        });
-
-
-        githubStars("eaplatanios/tensorflow_scala", function(stars) {
-            $("#TensorFlow-Scalaeaplatanios-tensorflow_scala-stars").text('' + stars);
-        });
-    </script>
 
     <!-- Scrolling Progress Bar -->
     <script type="text/javascript">

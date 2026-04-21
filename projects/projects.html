@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Research Projects | Navin Thapa</title>
-  <meta name="description" content="Personal website of Navin Thapa.">
+  <meta name="description" content="Research projects by Navin Thapa – laboratory seismology, volcano seismic monitoring, and probabilistic seismic hazard assessment.">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nvnsthapa.github.io/projects/">
+  <meta property="og:title" content="Research Projects | Navin Thapa">
+  <meta property="og:description" content="Laboratory seismology, volcano seismic monitoring, and probabilistic seismic hazard assessment research projects.">
+  <meta property="og:image" content="https://nvnsthapa.github.io/assets/img/project_bvalue/bvalue.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research Projects | Navin Thapa">
+  <meta name="twitter:description" content="Laboratory seismology, volcano seismic monitoring, and probabilistic seismic hazard assessment research projects.">
+  <meta name="twitter:image" content="https://nvnsthapa.github.io/assets/img/project_bvalue/bvalue.png">
 
   <!-- Fonts and Icons -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
@@ -19,7 +30,7 @@
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
     <div class="container-fluid p-0">
-      <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Navin</span> Thapa</a>
+      <a class="navbar-brand" href="/">Navin Thapa</a>
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -56,8 +67,8 @@
       </div>
       <div class="project-feature__body">
         <p class="project-label">Featured Project</p>
-        <h2 id="featured-project-title">Seismic b-value and Pore Pressure</h2>
-        <p>Direct measurement of pore pressure level and its effect on microseismicity, connecting controlled laboratory observations with induced seismicity in geothermal systems.</p>
+        <h2 id="featured-project-title">Stress, fault roughness, and pore-pressure effects on frequency magnitude distribution of lab and induced seismicity</h2>
+        <p>Published in <em>Geophysical Research Letters</em> (2025). Disentangling the effects of differential stress, fault roughness, and pore pressure on b-value using controlled laboratory experiments and EGS reservoir injection data.</p>
         <div class="project-tags">
           <span>Laboratory Seismology</span>
           <span>Pore Pressure</span>
@@ -74,10 +85,19 @@
         <h2>Project Areas</h2>
       </div>
 
+      <!-- ==================== PROJECT CARDS ====================
+           To add a new project:
+           1. Create a new HTML page in /projects/project_bvalue/ (copy any existing page)
+           2. Add a project image to /assets/img/
+           3. Copy one PROJECT CARD block below, paste inside the grid
+           4. Update href links, image, label, title, description, and tags
+      ======================================================== -->
       <div class="project-portfolio-grid">
+
+        <!-- ====== PROJECT CARD | Direct Shear ====== -->
         <article class="project-portfolio-card">
           <a class="project-card-link" href="/projects/project_bvalue/directShear.html">
-            <img src="/assets/img/project_bvalue/directShear.jpg" alt="Direct shear frictional experiment">
+            <img src="/assets/img/project_bvalue/directShear.jpg" alt="Direct shear frictional experiment" loading="lazy">
             <div class="project-portfolio-card__body">
               <p class="project-label">Rock Friction</p>
               <h3>Direct Shear Frictional Experiments</h3>
@@ -94,10 +114,12 @@
             <a href="https://github.com/nvnsthapa/2_DirectShear" target="_blank">Code</a>
           </div>
         </article>
+        <!-- ======= END PROJECT CARD ======= -->
 
+        <!-- ====== PROJECT CARD | Volcano Seismicity ====== -->
         <article class="project-portfolio-card">
           <a class="project-card-link" href="/projects/project_bvalue/volcanoSeis.html">
-            <img src="/assets/img/project_bvalue/volcanoSeis.jpg" alt="Volcano seismicity monitoring map">
+            <img src="/assets/img/project_bvalue/volcanoSeis.jpg" alt="Volcano seismicity monitoring map" loading="lazy">
             <div class="project-portfolio-card__body">
               <p class="project-label">Volcano Seismology</p>
               <h3>Volcano Seismicity</h3>
@@ -111,13 +133,15 @@
           </a>
           <div class="project-actions">
             <a href="/projects/project_bvalue/volcanoSeis.html">View Project</a>
-            <a href="http://www.ceri.memphis.edu/people/thgoebel/seismic_map2.html" target="_blank">Seismicity Map</a>
+            <a href="https://www.ceri.memphis.edu/people/thgoebel/seismic_map2.html" target="_blank">Seismicity Map</a>
           </div>
         </article>
+        <!-- ======= END PROJECT CARD ======= -->
 
+        <!-- ====== PROJECT CARD | Seismic Hazard Nepal ====== -->
         <article class="project-portfolio-card">
           <a class="project-card-link" href="/projects/project_bvalue/project_hazard.html">
-            <img src="/assets/img/project_hazard/PSHA.png" alt="Probabilistic seismic hazard assessment figure">
+            <img src="/assets/img/project_hazard/PSHA.png" alt="Probabilistic seismic hazard assessment figure" loading="lazy">
             <div class="project-portfolio-card__body">
               <p class="project-label">Seismic Hazard</p>
               <h3>Probabilistic Seismic Hazard Assessment of Nepal Himalayan Region</h3>
@@ -133,6 +157,8 @@
             <a href="/projects/project_bvalue/project_hazard.html">View Project</a>
           </div>
         </article>
+        <!-- ======= END PROJECT CARD ======= -->
+
       </div>
     </section>
   </main>
