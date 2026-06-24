@@ -24,8 +24,18 @@
   <!-- CSS Files -->
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
   <link rel="stylesheet" href="/assets/css/blog.css">
   <link rel="canonical" href="/blogs/">
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <!-- Scripts -->
   <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
@@ -34,18 +44,21 @@
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
     <div class="container-fluid p-0">
-      <a class="navbar-brand" href="/">Navin Thapa</a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav flex-nowrap">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/projects/projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="/publications/publications.html">Publications</a></li>
           <li class="nav-item navbar-active font-weight-bold"><a class="nav-link" href="/blogs/blogs.html">Blog<span class="sr-only">(current)</span></a></li>
           <li class="nav-item"><a class="nav-link" href="/more/more.html">Activities</a></li>
         </ul>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -88,36 +101,17 @@
 
     </div>
 
-       <!-- Add your blog content here
-       <div class="container-fluid p-0 text-justify">
-        <div class="blog-card">
-          <div class="blog-thumbnail" onclick="toggleBlogContent('blog2')">
-            <div class="blog-info">
-              <h3>Journey as a Geophysicist in Nepal: From Classroom to the Himalayas</h3>
-              <p class="blog-excerpt">This is a brief excerpt from my first blog post. It gives readers a quick overview of what they can expect to learn...</p>
-            </div>
-            <div class="blog-image">
-              <img src="/assets/img/blogs/geophysics1.jpg" alt="Blog thumbnail">
-            </div>
-          </div>
-          <div id="blog2" class="blog-content">
-            <h2>Journey as a Geophysicist in Nepal: From Classroom to the Himalayas</h2>
-            <div class="blog-meta">
-              <span class="date">March 15, 2024</span>
-              <span class="category">Technology</span>
-            </div>
-            <div class="blog-body">
-              <p>This is the full content of my first blog post. Here you can write your complete blog post with all the details, images, and formatting you want.</p>
-              <p>You can add multiple paragraphs, include images, and format the text as needed.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  </div><!-- /.content -->
 
   <!-- Footer -->
   <footer>
-    &copy; Copyright 2024 Navin Thapa.
+    <span>&copy; Copyright <span id="footer-year">2026</span> Navin Thapa.</span>
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-1234-5678" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://github.com/nvnsthapa" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <a href="#" class="footer-back-top" aria-label="Back to top">&uarr; Back to top</a>
   </footer>
 
   <!-- Core JavaScript Files -->
@@ -125,15 +119,7 @@
   <script src="/assets/js/popper.min.js" type="text/javascript"></script>
   <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="/assets/js/mdb.min.js" type="text/javascript"></script>
-  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="/assets/js/common.js"></script>
-  <script>
-    function toggleBlogContent(blogId) {
-      const content = document.getElementById(blogId);
-      content.classList.toggle('expanded');
-    }
-  </script>
+  <!-- Progress bar + dark mode + scroll-reveal handled by common.js -->
 </body>
 </html>

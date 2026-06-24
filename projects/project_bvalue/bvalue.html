@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Stress, Fault Roughness, and Pore-Pressure Effects on b-value | Navin Thapa</title>
-  <meta name="description" content="Published GRL 2025 study disentangling stress, fault roughness, and pore-pressure effects on frequency-magnitude distributions in lab and induced seismicity.">
+  <title>Does b-Value Increase With Pore-Pressure? | Navin Thapa</title>
+  <meta name="description"
+    content="Published GRL 2025 study disentangling differential stress, pore-pressure, and fault-damage effects on the seismic b-value using laboratory experiments and EGS reservoir data.">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nvnsthapa.github.io/projects/project_bvalue/bvalue.html">
-  <meta property="og:title" content="Stress, Fault Roughness, and Pore-Pressure Effects on b-value | Navin Thapa">
-  <meta property="og:description" content="Published in Geophysical Research Letters (2025). Disentangling stress, fault roughness, and pore-pressure effects on b-value using lab experiments and EGS injection data.">
+  <meta property="og:title" content="Does b-Value Increase With Pore-Pressure? | Navin Thapa">
+  <meta property="og:description"
+    content="Published in Geophysical Research Letters (2025). Laboratory experiments and EGS data reveal three independent controls on the seismic b-value: differential stress, pore-pressure, and fault-damage structure.">
   <meta property="og:image" content="https://nvnsthapa.github.io/assets/img/project_bvalue/bvalue.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Stress, Fault Roughness, and Pore-Pressure Effects on b-value | Navin Thapa">
-  <meta name="twitter:description" content="Published in Geophysical Research Letters (2025). Disentangling stress, fault roughness, and pore-pressure effects on b-value using lab experiments and EGS injection data.">
+  <meta name="twitter:title" content="Does b-Value Increase With Pore-Pressure? | Navin Thapa">
+  <meta name="twitter:description"
+    content="Published in Geophysical Research Letters (2025). Laboratory experiments and EGS data reveal three independent controls on the seismic b-value.">
   <meta name="twitter:image" content="https://nvnsthapa.github.io/assets/img/project_bvalue/bvalue.png">
 
   <!-- Fonts and Icons -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
   <link rel="canonical" href="/projects/project_bvalue/">
 
   <!-- Scripts -->
   <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
+
 <body>
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
     <div class="container-fluid p-0">
       <a class="navbar-brand" href="/">Navin Thapa</a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-          <li class="nav-item navbar-active font-weight-bold"><a class="nav-link" href="/projects/projects.html">Projects<span class="sr-only">(current)</span></a></li>
+          <li class="nav-item navbar-active font-weight-bold"><a class="nav-link"
+              href="/projects/projects.html">Projects<span class="sr-only">(current)</span></a></li>
           <li class="nav-item"><a class="nav-link" href="/publications/publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="/blogs/blogs.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="/more/more.html">Activities</a></li>
         </ul>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -58,48 +80,147 @@
 
   <!-- Content -->
   <div class="content">
+
+    <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
-  <ol class="breadcrumb p-0 text-lowercase">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/projects/projects.html">projects</a></li>
-    <li class="breadcrumb-item active">bvalue</li>
-  </ol>
-</nav>
+      <ol class="breadcrumb p-0 text-lowercase">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/projects/projects.html">Projects</a></li>
+        <li class="breadcrumb-item active">b-Value &amp; Pore-Pressure</li>
+      </ol>
+    </nav>
 
-<div class="row m-0" style="width: 100%;">
-  <div class="col-sm-12 p-0">
-    <h1>Stress, fault roughness, and pore-pressure effects on frequency magnitude distribution of lab and induced seismicity</h1>
-    <h5 class="mb-4">Published in <a href="https://doi.org/10.1029/2025GL115740" target="_blank">Geophysical Research Letters</a>, 2025.</h5>
-  </div>
-</div>
+    <div class="row m-0" style="width: 100%;">
+      <div class="col-sm-12 p-0">
+        <h1>Does b-Value Increase With Pore-Pressure?: Insights From Laboratory Experiments and Induced Seismicity</h1>
+        <h5 class="mb-1">
+          Navin Thapa, Georg Dresen, and Thomas H. Goebel
+        </h5>
+        <h5 class="mb-4">
+          <a href="https://doi.org/10.1029/2025GL115740" target="_blank" rel="noopener">
+            <em>Geophysical Research Letters</em>, 52, e2025GL115740 (2025)
+          </a>
+          &nbsp;&middot;&nbsp;
+          <span>DOI: 10.1029/2025GL115740</span>
+          &nbsp;&middot;&nbsp;
+          <div class="__dimensions_badge_embed__" data-doi="10.1029/2025GL115740" data-hide-zero-citations="false"
+            data-style="small_rectangle" data-legend="hover-right" style="display:inline-block; vertical-align:middle;">
+          </div>
+        </h5>
+      </div>
+    </div>
 
-<div class="container-fluid p-0 text-justify">
-  <p><img width="100%" src="/assets/img/project_bvalue/bvalue.png" /></p>
+    <div class="container-fluid p-0 text-justify">
 
-  <p>
-    The b-value — the slope of the earthquake frequency-magnitude distribution — is widely used to infer stress conditions in seismogenic zones.
-    Yet its interpretation is complicated by at least three factors that rarely act in isolation: differential stress, fault roughness, and pore pressure.
-  </p>
-  <p>
-    In this study, we disentangle these effects using controlled laboratory experiments and compare them with b-value variations observed during
-    fluid injection in Enhanced Geothermal System (EGS) reservoirs. We find that increasing differential stress drives an inverse linear reduction in b-value,
-    with the slope steepening at elevated pore pressures. Higher pore pressures, on average, are associated with lower b-values — contrary to a
-    commonly held assumption. Spatial variations during injection appear structurally controlled, with high-damage fault zones promoting locally elevated b-values.
-  </p>
-  <p>
-    These results caution against single-factor interpretations of b-value in natural and induced seismicity settings, and highlight the need to
-    account for the combined influence of stress, structure, and fluid pressure.
-  </p>
+      <!-- Figure -->
+      <p><img width="100%" src="/assets/img/project_bvalue/bvalue.png"
+          alt="b-value variation with differential stress, pore-pressure, and fault damage — key figure from Thapa et al. 2025 GRL" />
+      </p>
 
-</div>
+      <!-- Abstract -->
+      <h2>Abstract</h2>
+      <p>
+        Anthropogenic activities like fluid injection can increase pore-pressure and induce seismicity.
+        Variations in the b-value (slope of the frequency-magnitude distribution) of induced and natural
+        seismic events are thought to reflect the stress state, although recent laboratory results suggest
+        that fault roughness also contributes. In nature, stress, fault roughness, and pore-pressure effects
+        can rarely be disentangled. Here, we investigate these effects and their relative contributions to
+        b-value variation in the laboratory and compare them with hydro-shearing in Enhanced Geothermal
+        System (EGS) reservoirs. Spatial-temporal variations in b-values stem from three distinct factors:
+        (a) Increasing differential stress shows an inverse linear relationship with b-value, with a steeper
+        slope at high pore pressure. (b) Higher pore-pressures, on average, lead to lower b-values.
+        (c) Spatial variations during injection are potentially structurally controlled so that
+        high-damage zones promote higher b-values. We conclude that b-value variations outside the lab
+        require cautious interpretation because of these multiple underlying causes.
+      </p>
 
-  </div>
+      <!-- Key Findings -->
+      <h2>Key Findings</h2>
+      <ul>
+        <li>
+          <strong>Differential stress governs b-value through an inverse linear relationship.</strong>
+          As differential stress increases prior to fault slip, b-value decreases linearly — consistent
+          with earlier experimental studies. Crucially, this slope steepens at elevated pore-pressure,
+          meaning pore-pressure amplifies the stress-sensitivity of the frequency-magnitude distribution.
+        </li>
+        <li>
+          <strong>Elevated pore-pressure does not unconditionally raise b-value.</strong>
+          Contrary to a prevailing assumption in the induced-seismicity literature, higher pore-pressures
+          are, on average, associated with <em>lower</em> b-values in our experiments. The net effect
+          depends on the interplay between pore-pressure, differential stress, and fault geometry.
+        </li>
+        <li>
+          <strong>Fault-damage zones structurally control spatial b-value variations.</strong>
+          During EGS fluid injection, elevated b-values are spatially associated with high-damage fault
+          regions rather than with the injection point itself, indicating that local structural
+          heterogeneity — not pore-pressure alone — drives b-value maxima.
+        </li>
+        <li>
+          <strong>Multi-factor causation demands cautious b-value interpretation.</strong>
+          Because differential stress, pore-pressure, and fault structure each exert separable,
+          independent effects on b-value, single-factor interpretations of b-value changes in natural
+          or induced seismicity sequences are likely insufficient for reliable stress or hazard assessment.
+        </li>
+      </ul>
+
+      <!-- Methods -->
+      <h2>Methods</h2>
+      <p>
+        We conducted triaxial compression and stick-slip experiments on faulted cylindrical
+        <strong>Westerly Granite</strong> samples across a range of pore-pressures (0.5–35 MPa)
+        at a confining pressure of 150 MPa. Acoustic emissions (AEs) were recorded continuously
+        throughout each experiment using a multi-channel piezoelectric sensor array. AE magnitudes
+        were determined from recorded waveform amplitudes, and b-values were computed using maximum
+        likelihood estimation on rolling time windows within each stick-slip cycle. Laboratory results
+        were compared with seismicity catalogs from hydro-shearing operations at EGS reservoirs,
+        allowing direct evaluation of whether laboratory-scale controls translate to reservoir-scale
+        induced seismicity.
+      </p>
+
+      <!-- Significance -->
+      <h2>Significance</h2>
+      <p>
+        The b-value is routinely monitored in real-time during subsurface energy operations — including
+        Enhanced Geothermal Systems, wastewater disposal, and carbon storage — as a proxy for stress
+        state and seismic hazard. This study provides the first controlled experimental evidence that
+        pore-pressure, differential stress, and fault structure each contribute separable, measurable
+        effects on b-value. The results imply that current operational protocols relying on b-value
+        thresholds alone may misattribute its cause, and that integrating structural and stress
+        information is necessary for robust induced-seismicity hazard assessment.
+      </p>
+
+      <!-- Citation -->
+      <h2>Citation</h2>
+      <pre
+        style="background:#f4f4f4; padding:1rem; border-radius:6px; font-size:0.85rem; overflow-x:auto; white-space:pre-wrap;">Thapa, N., Dresen, G., &amp; Goebel, T. H. (2025). Does b-value increase with pore-pressure?:
+Insights from laboratory experiments and induced seismicity.
+<em>Geophysical Research Letters</em>, 52, e2025GL115740.
+https://doi.org/10.1029/2025GL115740</pre>
+
+      <!-- Links -->
+      <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="https://doi.org/10.1029/2025GL115740" target="_blank" rel="noopener" class="btn btn-primary">Read Paper
+          (Open Access)</a>
+        <a href="https://doi.org/10.17632/cg7xx3j59h.2" target="_blank" rel="noopener"
+          class="btn btn-outline-primary">Dataset (Mendeley)</a>
+        <a href="https://github.com/nvnsthapa/2_DirectShear" target="_blank" rel="noopener"
+          class="btn btn-outline-secondary">Code (GitHub)</a>
+      </div>
+
+    </div>
+
+  </div><!-- /.content -->
 
   <!-- Footer -->
   <footer>
-    &copy; Copyright 2024 Navin Thapa.
-    
-    
+    <span>&copy; Copyright <span id="footer-year">2026</span> Navin Thapa.</span>
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en" target="_blank" rel="noopener">Google
+        Scholar</a>
+      <a href="https://orcid.org/0000-0002-1234-5678" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://github.com/nvnsthapa" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <a href="#" class="footer-back-top" aria-label="Back to top">&uarr; Back to top</a>
   </footer>
 
   <!-- Core JavaScript Files -->
@@ -107,113 +228,9 @@
   <script src="/assets/js/popper.min.js" type="text/javascript"></script>
   <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="/assets/js/mdb.min.js" type="text/javascript"></script>
-  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="/assets/js/common.js"></script>
-
-  <!-- Scrolling Progress Bar -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var navbarHeight = $('#navbar').outerHeight(true);
-      $('body').css({ 'padding-top': navbarHeight });
-      $('progress-container').css({ 'padding-top': navbarHeight });
-      var progressBar = $('#progress');
-      progressBar.css({ 'top': navbarHeight });
-      var getMax = function() { return $(document).height() - $(window).height(); }
-      var getValue = function() { return $(window).scrollTop(); }   
-      // Check if the browser supports the progress element.
-      if ('max' in document.createElement('progress')) {
-        // Set the 'max' attribute for the first time.
-        progressBar.attr({ max: getMax() });
-        progressBar.attr({ value: getValue() });
-    
-        $(document).on('scroll', function() {
-          // On scroll only the 'value' attribute needs to be calculated.
-          progressBar.attr({ value: getValue() });
-        });
-
-        $(window).resize(function() {
-          var navbarHeight = $('#navbar').outerHeight(true);
-          $('body').css({ 'padding-top': navbarHeight });
-          $('progress-container').css({ 'padding-top': navbarHeight });
-          progressBar.css({ 'top': navbarHeight });
-          // On resize, both the 'max' and 'value' attributes need to be calculated.
-          progressBar.attr({ max: getMax(), value: getValue() });
-        });
-      } else {
-        var max = getMax(), value, width;
-        var getWidth = function() {
-          // Calculate the window width as a percentage.
-          value = getValue();
-          width = (value/max) * 100;
-          width = width + '%';
-          return width;
-        }
-        var setWidth = function() { progressBar.css({ width: getWidth() }); };
-        setWidth();
-        $(document).on('scroll', setWidth);
-        $(window).on('resize', function() {
-          // Need to reset the 'max' attribute.
-          max = getMax();
-          setWidth();
-        });
-      }
-    });
-  </script>
-
-  <!-- Code Syntax Highlighting -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-  <script src="/assets/js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-
-  <!-- Script Used for Randomizing the Projects Order -->
-  <!-- <script type="text/javascript">
-    $.fn.shuffleChildren = function() {
-      $.each(this.get(), function(index, el) {
-        var $el = $(el);
-        var $find = $el.children();
-
-        $find.sort(function() {
-          return 0.5 - Math.random();
-        });
-
-        $el.empty();
-        $find.appendTo($el);
-      });
-    };
-    $("#projects").shuffleChildren();
-  </script> -->
-
-  <!-- Project Cards Layout -->
-  <script type="text/javascript">
-    var $grid = $('#projects');
-
-    // $grid.masonry({ percentPosition: true });
-    // $grid.masonry('layout');
-
-    // Trigger after images load.
-    $grid.imagesLoaded().progress(function() {
-      $grid.masonry({ percentPosition: true });
-      $grid.masonry('layout');
-    });
-  </script>
-
-  <!-- Enable Tooltips -->
-  <script type="text/javascript">
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
-
-  <!-- Google Analytics -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-54519238-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+  <!-- Progress bar + dark mode + footer year handled by common.js -->
 </body>
+
 </html>

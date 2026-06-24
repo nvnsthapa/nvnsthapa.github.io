@@ -24,24 +24,37 @@
   <!-- CSS Files -->
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
   <link rel="canonical" href="/more/">
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
     <div class="container-fluid p-0">
-      <a class="navbar-brand" href="/">Navin Thapa</a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav flex-nowrap">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/projects/projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="/publications/publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="/blogs/blogs.html">Blog</a></li>
           <li class="nav-item navbar-active font-weight-bold"><a class="nav-link" href="/more/more.html">Activities<span class="sr-only">(current)</span></a></li>
         </ul>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -159,7 +172,13 @@
 
   <!-- Footer -->
   <footer>
-    &copy; Copyright 2024 Navin Thapa.
+    <span>&copy; Copyright <span id="footer-year">2026</span> Navin Thapa.</span>
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-1234-5678" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://github.com/nvnsthapa" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <a href="#" class="footer-back-top" aria-label="Back to top">&uarr; Back to top</a>
   </footer>
 
   <!-- Core JavaScript Files -->
@@ -222,49 +241,6 @@
       setCategory('fieldwork');
     });
   </script>
-
-  <!-- Scrolling Progress Bar -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var navbarHeight = $('#navbar').outerHeight(true);
-      $('body').css({ 'padding-top': navbarHeight });
-      $('progress-container').css({ 'padding-top': navbarHeight });
-      var progressBar = $('#progress');
-      progressBar.css({ 'top': navbarHeight });
-      var getMax = function() { return $(document).height() - $(window).height(); }
-      var getValue = function() { return $(window).scrollTop(); }
-      if ('max' in document.createElement('progress')) {
-        progressBar.attr({ max: getMax() });
-        progressBar.attr({ value: getValue() });
-
-        $(document).on('scroll', function() {
-          progressBar.attr({ value: getValue() });
-        });
-
-        $(window).resize(function() {
-          var navbarHeight = $('#navbar').outerHeight(true);
-          $('body').css({ 'padding-top': navbarHeight });
-          $('progress-container').css({ 'padding-top': navbarHeight });
-          progressBar.css({ 'top': navbarHeight });
-          progressBar.attr({ max: getMax(), value: getValue() });
-        });
-      } else {
-        var max = getMax(), value, width;
-        var getWidth = function() {
-          value = getValue();
-          width = (value/max) * 100;
-          width = width + '%';
-          return width;
-        }
-        var setWidth = function() { progressBar.css({ width: getWidth() }); };
-        setWidth();
-        $(document).on('scroll', setWidth);
-        $(window).on('resize', function() {
-          max = getMax();
-          setWidth();
-        });
-      }
-    });
-  </script>
+  <!-- Progress bar + dark mode + scroll-reveal handled by common.js -->
 </body>
 </html>

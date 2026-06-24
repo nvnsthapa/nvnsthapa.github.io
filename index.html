@@ -24,10 +24,21 @@
    <!-- CSS Files -->
     <link rel="stylesheet" href="/assets/css/academicons.min.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel="canonical" href="/">
 
     <!-- Scripts -->
     <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your actual Measurement ID -->
+    <!-- Get yours at: https://analytics.google.com → Admin → Data Streams → Web stream -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -43,7 +54,9 @@
         "department": "Center for Earthquake Research and Information"
       },
       "sameAs": [
-        "https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en"
+        "https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en",
+        "https://orcid.org/0000-0002-3154-425X",
+        "https://github.com/nvnsthapa"
       ]
     }
     </script>
@@ -53,18 +66,21 @@
     <!-- Header -->
     <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
         <div class="container-fluid p-0">
-            <a class="navbar-brand" href="/">Navin Thapa</a>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse text-right" id="navbarNav">
-                <ul class="navbar-nav ml-auto flex-nowrap">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav flex-nowrap">
                     <li class="nav-item navbar-active font-weight-bold"><a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="/projects/projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="/publications/publications.html">Publications</a></li>
                     <li class="nav-item"><a class="nav-link" href="/blogs/blogs.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="/more/more.html">Activities</a></li>
                 </ul>
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <span class="icon-moon" aria-hidden="true">🌙</span>
+                    <span class="icon-sun" aria-hidden="true">☀️</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -85,17 +101,17 @@
                 <p class="academic-kicker">Seismology | Earthquake Physics | Automated Monitoring</p>
                 <h1 class="title font-weight-bold">Navin Thapa</h1>
                 <h6>
-                    Graduate Doctoral Researcher<br /> CERI, University of Memphis
+                    Seismologist | Recent PhD, University of Memphis
                 </h6>
                 <p>
-                    I am a doctoral researcher in Seismology at the <a href="https://www.memphis.edu/ceri/">Center for Earthquake Research and Information</a>, University of Memphis, working in the <a href="https://www.ceri.memphis.edu/people/thgoebel/">Earthquake Physics Laboratory</a> under <a href="https://www.memphis.edu/ceri/people/faculty/thomas-goebel.php">Dr. Thomas Goebel</a>.
-                    My work focuses on the physics of faulting — from controlled laboratory experiments to earthquake sequences in subduction zones, volcanic systems, and Enhanced Geothermal System seismicity.
+                    I am a seismologist whose research bridges laboratory rock mechanics and observational seismology. I completed my PhD at the <a href="https://www.memphis.edu/ceri/">Center for Earthquake Research and Information</a>, University of Memphis, in the <a href="https://www.ceri.memphis.edu/people/thgoebel/">Earthquake Physics Laboratory</a> of <a href="https://www.memphis.edu/ceri/people/faculty/thomas-goebel.php">Dr. Thomas Goebel</a>. My work addresses the physics of faulting across scales — from controlled laboratory experiments to earthquake sequences in subduction zones, volcanic systems, and Enhanced Geothermal Systems.
                 </p>
                 <div class="academic-actions">
-                    <a href="/assets/pdf/vitae.pdf" target="_blank">CV</a>
                     <a href="mailto:nthapa@memphis.edu">Email</a>
                     <a href="https://www.linkedin.com/in/nvnsthapa/" target="_blank">LinkedIn</a>
                     <a href="https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    <a href="https://orcid.org/0000-0002-3154-425X" target="_blank">ORCID</a>
+                    <a href="https://github.com/nvnsthapa" target="_blank">GitHub</a>
                 </div>
             </div>
 
@@ -115,52 +131,50 @@
             </aside>
         </section>
 
-        <section class="academic-section research-focus">
+        <section class="academic-section research-focus reveal">
             <div class="academic-section__heading">
                 <p class="academic-kicker">Research Focus</p>
-                <h2 class="title">Decoding earthquakes — from rock experiments to seismic networks</h2>
+                <h2 class="title">Understanding earthquakes — from controlled experiments to continuous monitoring</h2>
             </div>
-            <div class="research-focus__grid">
-                <article>
-                    <h3>Fault Gouge Composition & Repeating Earthquakes</h3>
-                    <p>Fault gouge — the granular material ground between sliding rock surfaces — governs how a fault slips. I study how gouge composition controls frictional instability and the occurrence of repeating earthquakes — events that rupture the same patch repeatedly, leaving near-identical waveform fingerprints that reveal fault creep and stress cycling over time.</p>
-                </article>
-                <article>
-                    <h3>Pore Pressure & Seismic b-value</h3>
-                    <p>Fluid pressure in the subsurface is a key trigger for induced seismicity. Using controlled laboratory experiments, I directly measure how changing pore pressure shifts the frequency-magnitude distribution of acoustic emissions — providing a physical basis for interpreting b-value changes in geothermal and injection-induced earthquake sequences.</p>
-                </article>
-                <article>
-                    <h3>Laboratory Earthquakes</h3>
-                    <p>Faults in the lab obey the same statistical laws as faults in the Earth. By generating controlled slip events on rock samples, I study rupture nucleation, stress drop, and aftershock-like clustering at scales where every parameter can be measured — offering ground truth that field seismology alone cannot provide.</p>
-                </article>
-                <article>
-                    <h3>Automated Seismic Monitoring for Energy Operations</h3>
-                    <p>Safe subsurface energy production — geothermal, oil and gas, carbon storage — demands continuous, reliable seismic surveillance. I develop automated detection and classification pipelines that reduce analyst workload, improve event catalog completeness, and enable near-real-time hazard assessment for induced seismicity.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="academic-section academic-narrative">
-            <div class="academic-section__heading">
-                <p class="academic-kicker">Approach</p>
-                <h2 class="title">Where lab experiments, physics models, and field data converge</h2>
-            </div>
-            <div class="academic-narrative__body">
-                <p>
-                    At the Earthquake Physics Lab, our work spans various aspects of seismology,
-                    including fault slip dynamics, frictional properties, and seismic energy radiation.
-                </p>
-                <p>
-                    I integrate theoretical, numerical, and experimental approaches to explore fundamental earthquake processes, with a particular focus on:
-                </p>
-                <p>
-                    Beyond traditional earthquake physics, I am passionate about leveraging
-                    cutting-edge technologies, including machine learning and automation, to real-world challenges in seismic monitoring and energy sustainability. By integrating AI-driven seismic analysis with physical earthquake models, my work contributes to the development of smarter, data-driven solutions for energy production and seismic hazard mitigation.
-                </p>
+            <div class="research-focus__tabs reveal-group">
+                <ul class="nav nav-tabs research-focus__nav" role="tablist" aria-label="Research focus areas">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="tab-lab-quakes" data-toggle="tab" href="#panel-lab-quakes" role="tab" aria-controls="panel-lab-quakes" aria-selected="true">Laboratory Earthquake Physics</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="tab-induced-seismicity" data-toggle="tab" href="#panel-induced-seismicity" role="tab" aria-controls="panel-induced-seismicity" aria-selected="false">Induced &amp; Geothermal Seismicity</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="tab-ml-monitoring" data-toggle="tab" href="#panel-ml-monitoring" role="tab" aria-controls="panel-ml-monitoring" aria-selected="false">Machine Learning Monitoring</a>
+                    </li>
+                </ul>
+                <div class="tab-content research-focus__panels">
+                    <div class="tab-pane fade show active" id="panel-lab-quakes" role="tabpanel" aria-labelledby="tab-lab-quakes">
+                        <article>
+                            <h3>Laboratory Earthquake Physics and Fault Mechanics</h3>
+                            <p class="research-focus__tagline">From grain-scale heterogeneity to fault-scale rupture</p>
+                            <p>My research investigates how the compositional structure of fault gouge governs the nucleation, propagation, and arrest of slip events. Using analog fault materials, including glass bead–quartz mixtures and polymethyl methacrylate (PMMA) blocks, I design controlled laboratory experiments that span the mechanical continuum from stick-slip to stable sliding. I integrate far-field mechanical records, locally resolved stress measurements, and Digital Image Correlation (DIC) of the deformation field to characterize the preparatory phase that precedes dynamic rupture. My broader objective is to translate observable precursory signatures from controlled experiments into diagnostic frameworks applicable to natural fault systems.</p>
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="panel-induced-seismicity" role="tabpanel" aria-labelledby="tab-induced-seismicity">
+                        <article>
+                            <h3>Induced and Geothermal Seismicity</h3>
+                            <p class="research-focus__tagline">Constraining the seismic footprint of subsurface fluid operations</p>
+                            <p>My research addresses the physical and operational controls on seismicity associated with subsurface fluid injection and geothermal energy production. Through integrated analysis of regional seismic catalogs, source-parameter characterization, and operational injection records, I work to constrain the geomechanical conditions under which fluid migration perturbs the stress field sufficiently to trigger detectable earthquakes. I place particular emphasis on differentiating natural background activity from operationally induced events and on identifying the parameters most useful for forecasting hazard during reservoir development. My findings are intended to inform mitigation protocols for geothermal projects and other industrial activities dependent on managed subsurface fluid flow.</p>
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="panel-ml-monitoring" role="tabpanel" aria-labelledby="tab-ml-monitoring">
+                        <article>
+                            <h3>Machine Learning for Real-Time Seismic Monitoring</h3>
+                            <p class="research-focus__tagline">Real-time intelligence for seismic hazard</p>
+                            <p>My research develops machine-learning architectures for the automated detection, classification, and source characterization of seismic events within continuous waveform streams. I design these algorithms for low-latency deployment in operational monitoring environments, where the interval between event onset and actionable output must remain minimal without compromising detection accuracy. My work bridges fundamental investigation of earthquake processes with field-scale instrumentation, supporting both scientific advancement and the translation of monitoring technology into public-safety and industrial applications.</p>
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="academic-section selected-publications">
+        <section class="academic-section selected-publications reveal">
             <div class="academic-section__heading">
                 <p class="academic-kicker">Selected Publications</p>
                 <h2 class="title">Recent work</h2>
@@ -169,14 +183,17 @@
                  To add: copy one PUBLICATION CARD block, paste above the first,
                  update journal, title, authors, and DOI link.
             ======================================================== -->
-            <div class="publication-grid">
+            <div class="publication-grid reveal-group">
 
                 <!-- ====== PUBLICATION CARD | Thapa 2025 GRL ====== -->
                 <article>
                     <span>Geophysical Research Letters, 2025</span>
                     <h3>Does b-value increase with higher pore-pressure?: Insights from laboratory experiments and induced seismicity</h3>
                     <p><em>Navin Thapa</em>, Dresen Georg, and Thomas H. Goebel</p>
-                    <a href="https://doi.org/10.1029/2025GL115740" target="_blank">DOI</a>
+                    <div class="pub-card-actions">
+                        <a href="https://doi.org/10.1029/2025GL115740" target="_blank">DOI</a>
+                        <div class="__dimensions_badge_embed__" data-doi="10.1029/2025GL115740" data-hide-zero-citations="false" data-style="small_rectangle" data-legend="hover-right"></div>
+                    </div>
                 </article>
                 <!-- ======= END PUBLICATION CARD ======= -->
 
@@ -185,14 +202,17 @@
                     <span>Seismological Research Letters, 2025</span>
                     <h3>A Community Seismic Network for the Early Detection of Seismic Activity Close to Active Volcanoes in Western El Salvador</h3>
                     <p>Thomas H. Goebel, <em>Navin Thapa</em>, Sadia Marium Rinty, Susana Delgado Andino, Adonay Martinex-Coto, Jaqueline Rivera, and Benancio Henriquez-Miranda</p>
-                    <a href="https://doi.org/10.1785/0220240343" target="_blank">DOI</a>
+                    <div class="pub-card-actions">
+                        <a href="https://doi.org/10.1785/0220240343" target="_blank">DOI</a>
+                        <div class="__dimensions_badge_embed__" data-doi="10.1785/0220240343" data-hide-zero-citations="false" data-style="small_rectangle" data-legend="hover-right"></div>
+                    </div>
                 </article>
                 <!-- ======= END PUBLICATION CARD ======= -->
 
             </div>
         </section>
 
-        <section class="academic-section research-highlights">
+        <section class="academic-section research-highlights reveal">
             <div class="academic-section__heading">
                 <p class="academic-kicker">Highlights</p>
                 <h2 class="title">In the field, in print, in the news</h2>
@@ -202,19 +222,23 @@
                  highlight-grid, update image src, alt text, and caption.
                  Images go in /assets/img/gallery/
             ======================================================== -->
-            <div class="highlight-grid">
+            <div class="highlight-grid reveal-group">
 
                 <!-- ====== HIGHLIGHT CARD | UofM Story ====== -->
                 <article>
-                    <img src="assets/img/gallery/highlightstory.png" alt="Highlight story of my research published in University of Memphis" loading="lazy">
-                    <p>Highlight story of my research published in University of Memphis</p>
+                    <a href="https://www.memphis.edu/gradschool/news-events/navin_thapa.php" target="_blank" rel="noopener">
+                        <img src="assets/img/gallery/highlightstory.png" alt="Highlight story of my research published in University of Memphis" loading="lazy">
+                        <p>Highlight story of my research published in University of Memphis</p>
+                    </a>
                 </article>
                 <!-- ======= END HIGHLIGHT CARD ======= -->
 
                 <!-- ====== HIGHLIGHT CARD | Santa Ana Network ====== -->
                 <article>
-                    <img src="assets/img/gallery/santaanaNet.png" alt="Santa Ana Volcano seismicity monitoring network" loading="lazy">
-                    <p>Santa Ana Volcano seismicity monitoring network</p>
+                    <a href="https://www.memphis.edu/research/impact/newsletter_2024/april24_stories/uofm_research_center_launches_collaboration_with_el_salvador.php" target="_blank" rel="noopener">
+                        <img src="assets/img/gallery/santaanaNet.png" alt="Santa Ana Volcano seismicity monitoring network" loading="lazy">
+                        <p>Santa Ana Volcano seismicity monitoring network</p>
+                    </a>
                 </article>
                 <!-- ======= END HIGHLIGHT CARD ======= -->
 
@@ -406,9 +430,14 @@
 
     <!-- Footer -->
     <footer>
-        &copy; Copyright 2024 Navin Thapa.
-
-
+        <span>&copy; Copyright <span id="footer-year">2026</span> Navin Thapa.</span>
+        <div class="footer-links">
+            <a href="https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://orcid.org/0000-0002-3154-425X" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://github.com/nvnsthapa" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/nvnsthapa/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <a href="#" class="footer-back-top" aria-label="Back to top">&uarr; Back to top</a>
     </footer>
 
     <!-- Core JavaScript Files -->
@@ -421,85 +450,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="/assets/js/common.js"></script>
 
-    <!-- Scrolling Progress Bar -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            var navbarHeight = $('#navbar').outerHeight(true);
-            $('body').css({
-                'padding-top': navbarHeight
-            });
-            $('progress-container').css({
-                'padding-top': navbarHeight
-            });
-            var progressBar = $('#progress');
-            progressBar.css({
-                'top': navbarHeight
-            });
-            var getMax = function() {
-                return $(document).height() - $(window).height();
-            }
-            var getValue = function() {
-                return $(window).scrollTop();
-            }
-            // Check if the browser supports the progress element.
-            if ('max' in document.createElement('progress')) {
-                // Set the 'max' attribute for the first time.
-                progressBar.attr({
-                    max: getMax()
-                });
-                progressBar.attr({
-                    value: getValue()
-                });
-
-                $(document).on('scroll', function() {
-                    // On scroll only the 'value' attribute needs to be calculated.
-                    progressBar.attr({
-                        value: getValue()
-                    });
-                });
-
-                $(window).resize(function() {
-                    var navbarHeight = $('#navbar').outerHeight(true);
-                    $('body').css({
-                        'padding-top': navbarHeight
-                    });
-                    $('progress-container').css({
-                        'padding-top': navbarHeight
-                    });
-                    progressBar.css({
-                        'top': navbarHeight
-                    });
-                    // On resize, both the 'max' and 'value' attributes need to be calculated.
-                    progressBar.attr({
-                        max: getMax(),
-                        value: getValue()
-                    });
-                });
-            } else {
-                var max = getMax(),
-                    value, width;
-                var getWidth = function() {
-                    // Calculate the window width as a percentage.
-                    value = getValue();
-                    width = (value / max) * 100;
-                    width = width + '%';
-                    return width;
-                }
-                var setWidth = function() {
-                    progressBar.css({
-                        width: getWidth()
-                    });
-                };
-                setWidth();
-                $(document).on('scroll', setWidth);
-                $(window).on('resize', function() {
-                    // Need to reset the 'max' attribute.
-                    max = getMax();
-                    setWidth();
-                });
-            }
-        });
-    </script>
+    <!-- Progress bar + dark mode + scroll-reveal now handled by common.js -->
 
     <!-- Code Syntax Highlighting -->
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
@@ -531,31 +482,9 @@
         })
     </script>
 
-    <!-- Google Analytics -->
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-54519238-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <!-- GA4 is loaded in <head> above -->
 
-    <!-- Add this script at the end of your body tag -->
-    <script>
-        $(document).ready(function(){
-            $('#projectGallery').carousel({
-                interval: 5000  // Changes slide every 5 seconds
-            });
-        });
-    </script>
+
 </body>
 
 </html>

@@ -24,7 +24,17 @@
   <!-- CSS Files -->
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
   <link rel="canonical" href="/publications/">
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <!-- Scripts -->
   <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
@@ -33,18 +43,21 @@
   <!-- Header -->
   <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
     <div class="container-fluid p-0">
-      <a class="navbar-brand" href="/">Navin Thapa</a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav flex-nowrap">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/projects/projects.html">Projects</a></li>
           <li class="nav-item navbar-active font-weight-bold"><a class="nav-link" href="/publications/publications.html">Publications<span class="sr-only">(current)</span></a></li>
           <li class="nav-item"><a class="nav-link" href="/blogs/blogs.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="/more/more.html">Activities</a></li>
         </ul>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -77,6 +90,25 @@
            - Match that id in the data-toggle anchor's href and aria-controls
       ======================================================== -->
       <div class="publication-list">
+
+        <!-- ====== PUBLICATION ITEM | Koirala 2026 PAGEOPH ====== -->
+        <article class="publication-item">
+          <div class="publication-year">2026</div>
+          <div class="publication-record">
+            <h3>Differences in Spatial Localization of Acoustic Emissions During Stick–Slip and Stable Sliding on Laboratory Fault Gouge</h3>
+            <p class="publication-authors">Roshan Koirala, <em>Navin Thapa</em>, and Thomas H. Goebel</p>
+            <p class="publication-venue"><a href="https://doi.org/10.1007/s00024-026-04022-y" target="_blank">Pure and Applied Geophysics</a> (2026).</p>
+            <div class="publication-actions">
+              <a href="#koirala-2026-ae-localization-abstract" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="koirala-2026-ae-localization-abstract">Abstract</a>
+              <a href="https://doi.org/10.1007/s00024-026-04022-y" target="_blank">Paper</a>
+              <div class="__dimensions_badge_embed__ publication-dimensions" data-doi="10.1007/s00024-026-04022-y" data-hide-zero-citations="false" data-style="small_rectangle" data-legend="hover-right"></div>
+            </div>
+            <div id="koirala-2026-ae-localization-abstract" class="collapse publication-abstract">
+              <p>Acoustic emission (AE) events during frictional sliding on laboratory fault gouge are closely linked to microphysical processes, including grain comminution, force chain collapse, and strain localization. Such micro-seismic events in the lab may also provide important constraints on foreshock characteristics and rupture nucleation in nature. Here, we locate AE events with millimeter accuracy and compare their spatiotemporal evolution during stick–slip in soda-lime glass and stable sliding in quartz sand gouge. The gouges are sandwiched between corrugated PMMA blocks and loaded to failure under constant shear velocity and constant normal displacement boundary conditions. We observe abrupt broadening of the AE activity perpendicular to the slip plane shortly before stick–slip, i.e., after 95% of the interseismic period, coinciding with rapid slip acceleration. Conversely, stable sliding lacks final-stage slip acceleration and the AE activity width shows only minor variations, which are correlated with gradual fault compaction and dilation. These differences in fault dilation and AE activity width may suggest different micromechanical processes associated with stable sliding vs. stick–slip (e.g., grain rotation and translation vs. force chain formation and collapse). We compare the tests on planar PMMA-gouge with experiments on rough, granite faults with off-fault damage. The latter exhibit pronounced AE localization before stick slip which starts early in the interseismic period. The width of AE activity zones on rough faults is reduced by a factor of ~ 2.5 (i.e., 10 mm to 4 mm) before dynamic failure compared to a factor of ~ 2 in planar soda lime glass (i.e., from 2 to 1 mm). Collectively, these findings demonstrate that microseismicity localization before labquakes, and potentially earthquakes, is strongly influenced by granular dynamics, gouge composition, and off-fault damage. Documenting these factors is crucial for an improved understanding of fault mechanics and earthquake nucleation.</p>
+            </div>
+          </div>
+        </article>
+        <!-- ======= END PUBLICATION ITEM ======= -->
 
         <!-- ====== PUBLICATION ITEM | Thapa 2025 GRL ====== -->
         <article class="publication-item">
@@ -148,17 +180,6 @@
            No abstract toggle needed unless you have a preprint link.
       ======================================================== -->
       <div class="publication-list">
-
-        <!-- ====== SUBMITTED ITEM | Koirala 2025 ====== -->
-        <article class="publication-item">
-          <div class="publication-year">2025</div>
-          <div class="publication-record">
-            <h3>Difference in spatial localization of acoustic emissions during stick-slip and stable sliding on laboratory fault gouge</h3>
-            <p class="publication-authors">Roshan Koirala, <em>Navin Thapa</em>, and Thomas H. Goebel</p>
-            <p class="publication-venue">Submitted paper to Geophysical Journal International (preprint available)</p>
-          </div>
-        </article>
-        <!-- ======= END SUBMITTED ITEM ======= -->
 
         <!-- ====== SUBMITTED ITEM | Pandey 2025 ====== -->
         <article class="publication-item">
@@ -321,7 +342,13 @@
 
   <!-- Footer -->
   <footer>
-    &copy; Copyright 2024 Navin Thapa.
+    <span>&copy; Copyright <span id="footer-year">2026</span> Navin Thapa.</span>
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=G-T459UAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-1234-5678" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://github.com/nvnsthapa" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <a href="#" class="footer-back-top" aria-label="Back to top">&uarr; Back to top</a>
   </footer>
 
   <!-- Core JavaScript Files -->
@@ -330,49 +357,6 @@
   <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="/assets/js/mdb.min.js" type="text/javascript"></script>
   <script src="/assets/js/common.js"></script>
-
-  <!-- Scrolling Progress Bar -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var navbarHeight = $('#navbar').outerHeight(true);
-      $('body').css({ 'padding-top': navbarHeight });
-      $('progress-container').css({ 'padding-top': navbarHeight });
-      var progressBar = $('#progress');
-      progressBar.css({ 'top': navbarHeight });
-      var getMax = function() { return $(document).height() - $(window).height(); }
-      var getValue = function() { return $(window).scrollTop(); }
-      if ('max' in document.createElement('progress')) {
-        progressBar.attr({ max: getMax() });
-        progressBar.attr({ value: getValue() });
-
-        $(document).on('scroll', function() {
-          progressBar.attr({ value: getValue() });
-        });
-
-        $(window).resize(function() {
-          var navbarHeight = $('#navbar').outerHeight(true);
-          $('body').css({ 'padding-top': navbarHeight });
-          $('progress-container').css({ 'padding-top': navbarHeight });
-          progressBar.css({ 'top': navbarHeight });
-          progressBar.attr({ max: getMax(), value: getValue() });
-        });
-      } else {
-        var max = getMax(), value, width;
-        var getWidth = function() {
-          value = getValue();
-          width = (value/max) * 100;
-          width = width + '%';
-          return width;
-        }
-        var setWidth = function() { progressBar.css({ width: getWidth() }); };
-        setWidth();
-        $(document).on('scroll', setWidth);
-        $(window).on('resize', function() {
-          max = getMax();
-          setWidth();
-        });
-      }
-    });
-  </script>
+  <!-- Progress bar + dark mode + scroll-reveal handled by common.js -->
 </body>
 </html>

@@ -1,0 +1,826 @@
+/* ============================================================
+   custom.css — Site-wide additions for nvnsthapa.github.io
+   Dark mode · Scroll-reveal · Fieldwork map · Teaching section
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. CSS CUSTOM PROPERTIES (Light & Dark themes)
+   ---------------------------------------------------------- */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-navbar: #f5f5f5;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #868e96;
+  --border-color: #dee2e6;
+  --accent-color: #0062cc;
+  --accent-hover: #004fa3;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-card: #1e1e1e;
+  --bg-navbar: #1a1a1a;
+  --text-primary: #e8e8e8;
+  --text-secondary: #aaaaaa;
+  --text-muted: #777777;
+  --border-color: #333333;
+  --accent-color: #4ea8ff;
+  --accent-hover: #80c1ff;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.55);
+}
+
+/* ----------------------------------------------------------
+   2. GLOBAL DARK-MODE OVERRIDES
+   ---------------------------------------------------------- */
+[data-theme="dark"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: var(--bg-navbar) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .nav-link {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .content,
+[data-theme="dark"] main {
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card-text {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4,
+[data-theme="dark"] h5, [data-theme="dark"] h6 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] li {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] a {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--accent-hover);
+}
+
+[data-theme="dark"] .academic-kicker,
+[data-theme="dark"] .eyebrow {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .academic-hero {
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .academic-hero__profile > div {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .research-focus {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .research-focus article {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .research-focus article h3 {
+  color: var(--text-primary);
+}
+
+/* ----------------------------------------------------------
+   RESEARCH FOCUS TABS
+   ---------------------------------------------------------- */
+.research-focus__tabs {
+  margin-top: 0.5rem;
+}
+
+.research-focus__nav {
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  border-bottom: 1px solid var(--border-color, var(--academic-line));
+  margin-bottom: 0;
+}
+
+.research-focus__nav .nav-item {
+  margin-bottom: -1px;
+}
+
+.research-focus__nav .nav-link {
+  border: 1px solid transparent;
+  border-radius: 8px 8px 0 0;
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-secondary, var(--academic-muted));
+  background: transparent;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.research-focus__nav .nav-link:hover,
+.research-focus__nav .nav-link:focus {
+  color: var(--accent-color, #8f1d1d);
+  border-color: transparent;
+  background: rgba(143, 29, 29, 0.04);
+}
+
+.research-focus__nav .nav-link.active {
+  color: var(--accent-color, #8f1d1d);
+  border-color: var(--border-color, var(--academic-line));
+  border-bottom-color: var(--bg-secondary, var(--academic-surface));
+  background: var(--bg-secondary, var(--academic-surface));
+}
+
+.research-focus__panels {
+  border: 1px solid var(--border-color, var(--academic-line));
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  background: var(--bg-secondary, var(--academic-surface));
+  box-shadow: 0 12px 30px rgba(32, 42, 51, 0.05);
+}
+
+.research-focus__panels article {
+  padding: 1.5rem 1.35rem;
+}
+
+.research-focus__panels h3 {
+  margin-bottom: 0.35rem;
+  color: var(--text-primary, var(--academic-ink));
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.research-focus__tagline {
+  margin: 0 0 0.85rem;
+  color: var(--accent-color, #8f1d1d);
+  font-size: 0.92rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.research-focus__panels p:not(.research-focus__tagline) {
+  margin: 0;
+  color: var(--text-secondary, var(--academic-muted));
+  line-height: 1.75;
+}
+
+[data-theme="dark"] .research-focus__tagline {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .research-focus__nav .nav-link.active {
+  border-bottom-color: var(--bg-secondary);
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .research-focus__panels {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+@media (max-width: 767px) {
+  .research-focus__nav .nav-link {
+    border-radius: 8px;
+    font-size: 0.82rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .research-focus__nav .nav-link.active {
+    border-radius: 8px;
+    border-bottom-color: var(--border-color, var(--academic-line));
+  }
+
+  .research-focus__panels {
+    border-top: 1px solid var(--border-color, var(--academic-line));
+    margin-top: 0.75rem;
+    border-radius: 8px;
+  }
+}
+
+/* ----------------------------------------------------------
+   9. ORCID & GITHUB HERO LINK STYLES
+   ---------------------------------------------------------- */
+
+[data-theme="dark"] .academic-narrative {
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .selected-publications {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .selected-publications article {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .publication-grid article span {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .highlight-grid article {
+  background-color: var(--bg-card);
+}
+
+[data-theme="dark"] .home-section {
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .badge.primary-color {
+  background-color: #004fa3 !important;
+  color: #fff !important;
+}
+
+[data-theme="dark"] .project-portfolio-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .publication-item {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .publication-year {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .activity-event {
+  border-color: var(--border-color);
+  background-color: var(--bg-card);
+}
+
+[data-theme="dark"] .activity-date {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* ----------------------------------------------------------
+   3. DARK MODE TOGGLE BUTTON
+   ---------------------------------------------------------- */
+#dark-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: background var(--transition-speed), transform 0.2s;
+  margin-left: 8px;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+#dark-mode-toggle:hover {
+  background-color: rgba(128,128,128,0.15);
+  transform: rotate(20deg);
+}
+
+#dark-mode-toggle .icon-sun,
+#dark-mode-toggle .icon-moon {
+  display: none;
+  line-height: 1;
+}
+
+[data-theme="light"] #dark-mode-toggle .icon-moon,
+:root:not([data-theme]) #dark-mode-toggle .icon-moon {
+  display: inline;
+}
+
+[data-theme="dark"] #dark-mode-toggle .icon-sun {
+  display: inline;
+}
+
+/* ----------------------------------------------------------
+   4. SCROLL-REVEAL ANIMATIONS
+   ---------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.reveal--left {
+  transform: translateX(-28px);
+}
+
+.reveal.reveal--right {
+  transform: translateX(28px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger children inside a reveal container */
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal-group.is-visible > *:nth-child(1) { transition-delay: 0.05s; opacity:1; transform:none; }
+.reveal-group.is-visible > *:nth-child(2) { transition-delay: 0.15s; opacity:1; transform:none; }
+.reveal-group.is-visible > *:nth-child(3) { transition-delay: 0.25s; opacity:1; transform:none; }
+.reveal-group.is-visible > *:nth-child(4) { transition-delay: 0.35s; opacity:1; transform:none; }
+.reveal-group.is-visible > *:nth-child(5) { transition-delay: 0.45s; opacity:1; transform:none; }
+.reveal-group.is-visible > *:nth-child(6) { transition-delay: 0.55s; opacity:1; transform:none; }
+
+/* ----------------------------------------------------------
+   5. FIELDWORK MAP SECTION
+   ---------------------------------------------------------- */
+.fieldwork-map-section {
+  padding: 4rem 0;
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .fieldwork-map-section {
+  background-color: #161616;
+}
+
+.fieldwork-map-section .academic-section__heading {
+  margin-bottom: 2rem;
+}
+
+#fieldwork-map {
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.fieldwork-map-section .map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.25rem;
+  justify-content: center;
+}
+
+.fieldwork-map-section .map-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.fieldwork-map-section .map-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.map-legend-dot--institution { background-color: #2563eb; }
+.map-legend-dot--fieldwork   { background-color: #16a34a; }
+.map-legend-dot--origin      { background-color: #dc2626; }
+.map-legend-dot--workshop    { background-color: #d97706; }
+
+/* Leaflet dark-mode adjustments */
+[data-theme="dark"] .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.85) saturate(0.9);
+}
+
+[data-theme="dark"] .leaflet-container {
+  background: #242424;
+}
+
+[data-theme="dark"] .leaflet-popup-content-wrapper,
+[data-theme="dark"] .leaflet-popup-tip {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* ----------------------------------------------------------
+   6. TEACHING / MENTORING SECTION
+   ---------------------------------------------------------- */
+.teaching-section {
+  padding: 4rem 0;
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .teaching-section {
+  background-color: var(--bg-primary);
+}
+
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.teaching-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.6rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.teaching-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 4px 0 0 4px;
+}
+
+.teaching-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.teaching-card__role {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.teaching-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.3rem;
+}
+
+.teaching-card__meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.teaching-card p {
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------
+   7. FOOTER ENHANCEMENTS
+   ---------------------------------------------------------- */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.25rem 2rem;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-back-top {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-back-top:hover {
+  color: var(--accent-color);
+}
+
+/* ----------------------------------------------------------
+   8. HOMEPAGE SELECTED PUBLICATIONS — Dimensions badges
+   ---------------------------------------------------------- */
+.pub-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pub-card-actions a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color 0.2s;
+}
+
+.pub-card-actions a:hover {
+  color: var(--accent-hover);
+}
+
+/* ----------------------------------------------------------
+   9. ORCID & GITHUB HERO LINK STYLES
+   ---------------------------------------------------------- */
+.academic-actions a[href*="orcid"],
+.academic-actions a[href*="github"] {
+  /* these inherit the existing .academic-actions styles */
+}
+
+/* ensure SVG icons in hero links size properly */
+.academic-actions a svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  margin-right: 0.2em;
+}
+
+/* ----------------------------------------------------------
+   10. SITE-WIDE LAYOUT WIDTH
+   Keep a consistent page frame across the site while preserving
+   narrower text measures inside content-heavy sections.
+   ---------------------------------------------------------- */
+@media (min-width: 1200px) {
+  #navbar.navbar .container-fluid,
+  .navbar .container-fluid,
+  .content,
+  .container-fluid,
+  .academic-home,
+  body:not(.home-page) .content,
+  .publication-page,
+  .projects-page,
+  .activities-page {
+    max-width: 1380px;
+  }
+
+  .academic-home {
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+  }
+
+  .academic-hero {
+    grid-template-columns: minmax(0, 1.12fr) 380px;
+    gap: 4rem;
+  }
+
+  .academic-hero__copy p:not(.academic-kicker) {
+    max-width: 860px;
+  }
+
+  .academic-section {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  body:not(.home-page) .content > h6,
+  .page-intro h6,
+  .activities-hero__content,
+  .academic-narrative__body {
+    max-width: 820px;
+  }
+}
+
+/* ----------------------------------------------------------
+   11. GLASS NAVBAR
+   ---------------------------------------------------------- */
+#navbar.navbar {
+  min-height: 78px;
+  padding: 0.7rem 0;
+  border-bottom: 0 !important;
+  background: rgba(20, 31, 42, 0.68) !important;
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  box-shadow: 0 18px 42px rgba(12, 20, 28, 0.16) !important;
+}
+
+#navbar.navbar::after {
+  display: none;
+}
+
+#navbar.navbar .container-fluid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 1rem;
+  min-height: 0;
+  padding-right: 1.25rem !important;
+  padding-left: 1.25rem !important;
+}
+
+#navbar .navbar-brand {
+  display: none !important;
+}
+
+#navbar .navbar-toggler {
+  grid-column: 1;
+  justify-self: start;
+  align-self: center;
+  margin-left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+#navbar .navbar-toggler:hover,
+#navbar .navbar-toggler:focus {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+#navbar .navbar-toggler-icon {
+  filter: invert(1) grayscale(1) brightness(1.85);
+}
+
+#navbar .navbar-collapse {
+  grid-column: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar .navbar-nav {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+#navbar .navbar-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.45rem 0.92rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+#navbar .navbar-nav .nav-link:hover,
+#navbar .navbar-nav .nav-link:focus {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+#navbar .navbar-active .nav-link {
+  border-color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 248, 240, 0.96);
+  color: #17212b !important;
+  box-shadow: 0 10px 24px rgba(10, 18, 24, 0.14);
+}
+
+#navbar .navbar-active .nav-link::after {
+  display: none !important;
+}
+
+#dark-mode-toggle {
+  grid-column: 3;
+  justify-self: end;
+  width: 40px;
+  height: 40px;
+  margin-left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+#dark-mode-toggle:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: rotate(16deg);
+}
+
+body {
+  padding-top: 96px;
+}
+
+#progress,
+.progress-container {
+  top: 78px;
+}
+
+[data-theme="dark"] #navbar.navbar {
+  background: rgba(10, 16, 23, 0.78) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.3) !important;
+}
+
+@media (max-width: 767.98px) {
+  #navbar.navbar {
+    min-height: 72px;
+    padding: 0.5rem 0;
+  }
+
+  #navbar.navbar .container-fluid {
+    grid-template-columns: auto 1fr auto;
+    row-gap: 0.55rem;
+  }
+
+  #navbar .navbar-collapse {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    padding-top: 0.15rem;
+    justify-content: flex-start;
+  }
+
+  #navbar .navbar-nav {
+    align-items: stretch;
+    gap: 0.35rem;
+    padding: 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    background: rgba(11, 19, 28, 0.68);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  #navbar .navbar-nav .nav-link {
+    justify-content: flex-start;
+    width: 100%;
+    border-radius: 12px;
+    padding: 0.62rem 0.9rem;
+  }
+
+  #dark-mode-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  body {
+    padding-top: 90px;
+  }
+
+  #progress,
+  .progress-container {
+    top: 72px;
+  }
+}
